@@ -71,11 +71,11 @@ def draw_plot(df):
   
 if __name__ == "__main__":  
     # st.set_page_config(layout="centered", width="80%")  
-    st.title("CSV文件曲线图绘制器")  
-    st.write("上传你的CSV文件，然后选择X轴和Y轴以生成曲线图")  
+    st.title("用Potential/V为横坐标，1/c方做纵坐标，画曲线")  
+    st.write("上传你的文件txt，自动计算1/c方并找到最大斜率的切线及与X轴的交点")  
   
     # 文件上传  
-    uploaded_file = st.file_uploader("上传CSV文件")  
+    uploaded_file = st.file_uploader("上传文件")  
     if uploaded_file is not None :  
         data = load_data(uploaded_file)  
         draw_plot(data)
